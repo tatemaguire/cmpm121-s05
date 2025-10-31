@@ -23,24 +23,26 @@ function setup() {
 
   incrementButton.addEventListener("click", () => {
     counter++;
-    counterSpan.innerHTML = `${counter}`;
-    document.title = "Clicked " + counter;
-    document.body.style.backgroundColor = counter % 2 ? "pink" : "lightblue";
+    update_counter_display();
   });
 
   decrementButton.addEventListener("click", () => {
     counter--;
-    counterSpan.innerHTML = `${counter}`;
-    document.title = "Clicked " + counter;
-    document.body.style.backgroundColor = counter % 2 ? "pink" : "lightblue";
+    update_counter_display();
   });
 
   resetButton.addEventListener("click", () => {
     counter = 0;
-    counterSpan.innerHTML = `${counter}`;
+    update_counter_display();
+  });
+
+  function update_counter_display() {
+    if (counterSpan) {
+      counterSpan.innerHTML = `${counter}`;
+    }
     document.title = "Clicked " + counter;
     document.body.style.backgroundColor = counter % 2 ? "pink" : "lightblue";
-  });
+  }
 }
 
 function start() {
