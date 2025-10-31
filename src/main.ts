@@ -45,8 +45,4 @@ function setup() {
   }
 }
 
-function start() {
-  setup();
-}
-
-start();
+setup();

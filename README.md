@@ -8,6 +8,7 @@
 - Excessive comments
 - Duplicate code
   - Several parts of the code update the page after the counter changes
+- Middle man (start function)
 
 ## Refactorings
 
@@ -15,3 +16,4 @@
 - Renamed variables to be more descriptive
 - Removed comments in favor of more detailed variable names
 - Extracted page update code into a function
+- Removed start function
